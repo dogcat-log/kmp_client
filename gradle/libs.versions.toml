@@ -1,0 +1,106 @@
+[versions]
+# 공통버전
+agp = "8.8.2"  # Android Gradle Plugin (안드로이드 빌드 도구)
+kotlin = "2.0.0"  # Kotlin 언어 버전
+multiplatform-settings = "1.1.1"  # Kotlin Multiplatform Settings (멀티플랫폼 설정 저장 라이브러리)
+coreKtx = "1.15.0"  # Android KTX (확장 함수)
+
+
+# Decompose 의존성
+decompose = "2.2.2"  # 멀티플랫폼 아키텍처 및 상태 관리 라이브러리
+essenty = "2.4.0"  # 멀티플랫폼 상태 관리 라이브러리
+
+# logging
+napier = "2.7.1"  # Napier (멀티플랫폼 로그 라이브러리)
+
+# DI (의존성 주입)
+koin = "3.5.3"  # Koin (의존성 주입 라이브러리)
+
+# Android 전용 라이브러리
+compose = "1.7.8"  # Jetpack Compose (UI 구성 요소 라이브러리)
+composeBom = "2025.02.00"  # Jetpack Compose BOM (버전 관리)
+junit = "4.13.2"  # JUnit (테스트 프레임워크)
+junitVersion = "1.2.1"  # JUnit (업데이트된 버전)
+espressoCore = "3.6.1"  # Espresso (UI 테스트 라이브러리)
+compose-compiler = "1.5.8"  # Jetpack Compose 컴파일러
+compose-material3 = "1.3.1"  # Material3 (Jetpack Compose에서 Material 디자인 사용)
+androidx-activityCompose = "1.10.1"  # Activity와 Jetpack Compose 통합을 위한 라이브러리
+lifecycleRuntimeKtx = "2.8.7"  # Android Lifecycle Runtime (KTX 확장)
+
+kakao = "2.20.6"
+googleSignIn = "21.3.0"
+naverLogin = "5.10.0"
+
+# network
+ktor = "2.3.8"  # Ktor (HTTP 클라이언트 라이브러리, 멀티플랫폼 지원)
+
+# Image
+coil = "2.6.0"
+appcompat = "1.7.0"
+material = "1.12.0"  # Coil (이미지 로딩 라이브러리, Compose 지원)
+
+# Ios 관련 버전
+
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+ktor-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatform-settings" }
+settings-coroutines = { module = "com.russhwolf:multiplatform-settings-coroutines", version.ref = "multiplatform-settings" }
+decompose = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
+decompose-compose = { module = "com.arkivanov.decompose:extensions-compose-jetpack", version.ref = "decompose" }
+essenty-lifecycle = { module = "com.arkivanov.essenty:lifecycle", version.ref = "essenty" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+napier = { module = "io.github.aakira:napier", version.ref = "napier" }
+
+# Android 전용 라이브러리
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+ktor-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+kakao-user = { group = "com.kakao.sdk", name = "v2-user", version.ref = "kakao" }
+google-sigin = {group = "com.google.android.gms", name= "play-services-auth", version.ref = "googleSignIn"}
+naver-login = {group = "com.navercorp.nid", name= "oauth", version.ref = "naverLogin"}
+
+
+# iOS 전용 라이브러리
+ktor-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+
+[plugins]
+# 공통 플러그인
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+# Android 전용 플러그인
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+
+# Ios 전용
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
